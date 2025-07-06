@@ -44,14 +44,3 @@ Expected Output
 [acre, care, race]
 [bee]
 
-Scalability Considerations
-For 10 million words:
-The program uses buffered reading, which avoids loading the entire file into memory.
-HashMap provides constant-time insertion and lookup, supporting efficient grouping.
-Initial capacities for collections can be increased to reduce resizing overhead.
-
-For 100 billion words:
-Processing must be done in a stream-oriented or distributed manner.
-Intermediate results should be written to disk or stored in a database.
-Technologies such as MapReduce (Hadoop or Apache Spark) should be used to parallelize processing by anagram key.
-Memory usage must be minimized, and data must be processed in chunks or batches.
